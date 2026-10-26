@@ -1,0 +1,2753 @@
+{
+  "generado": "2026-10-26T11:20:11",
+  "plantillas": {
+    "MARM": {
+      "origen": "MAG-TC400",
+      "puestaEnMarcha": [
+        {
+          "tipo": "Pre-operación",
+          "n": 1,
+          "texto": "Abrir entrada principal de vapor",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Pre-operación",
+          "n": 2,
+          "texto": "Verificar que las válvulas mariposa de 6'' y 1'' estén cerradas",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Pre-operación",
+          "n": 3,
+          "texto": "Abrir entrada de agua y llenar a nivel deseado",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Pre-operación",
+          "n": 4,
+          "texto": "Abrir entrada de vapor (Marmita 1 y/o 2)",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Pre-operación",
+          "n": 5,
+          "texto": "Abrir salida atmosférica unos segundos y cerrar (sacar aire)",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 1,
+          "texto": "Ingresar el producto a la marmita",
+          "duracion": null,
+          "obs": "Frutas para escaldado (Marmita 1)\nÚnicamente pulpa de fruta pasteurizado (Marmita 2)"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 2,
+          "texto": "Accionar agitadores",
+          "duracion": null,
+          "obs": "Controlar velocidad mediante variador de frecuencia"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 3,
+          "texto": "Esperar que acabe el proceso",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 4,
+          "texto": "Descarga de producto escaldado (Marmita 1)",
+          "duracion": null,
+          "obs": "Girar ducto hacia:\n- Molino\n- Despulpadora\n\nAccionar descarga"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 5,
+          "texto": "Descarga de producto pasteurizado",
+          "duracion": null,
+          "obs": "Accionar estación de bombeo n° 0"
+        }
+      ],
+      "mantenimiento": [
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Revisión de aceite",
+          "n": 1,
+          "texto": "Verificar aceite en caja de Motor Reductor",
+          "herramientas": null,
+          "frecuencia": "TRIMESTRAL",
+          "notas": null
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Limpieza general",
+          "n": 1,
+          "texto": "Ingresar agua a marmita",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": "NO MOJAR MOTORES"
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Limpieza general",
+          "n": 2,
+          "texto": "Ingresar agua por tubería 1''",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": null
+        }
+      ]
+    },
+    "DPU": {
+      "origen": "DSP-TC1000",
+      "puestaEnMarcha": [
+        {
+          "tipo": "Puesta en marcha",
+          "n": 1,
+          "texto": "Colocar recipientes en salida de producto y subproducto",
+          "duracion": null,
+          "obs": "Antes de encender, revisar que no existan cuerpos extraños en el interior de la máquina\nAntes de encender: revisar que no existan cuerpos extraños en el interior de la máquina (pernos, cuchillos, herramientas, etc.)"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 2,
+          "texto": "Presionar el botón verde (ENCENDIDO)",
+          "duracion": null,
+          "obs": "Encender previamente el tablero centralizado"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 3,
+          "texto": "Ingresar el producto en proceso por la tolva de ingreso",
+          "duracion": null,
+          "obs": "No exceder la capacidad de carga por encima de la recomendada"
+        }
+      ],
+      "mantenimiento": [
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Ajuste y/o cambio de bandas",
+          "n": 1,
+          "texto": "Desmontar cubre motor",
+          "herramientas": "Llave de boca 11",
+          "frecuencia": "SEMANAL",
+          "notas": null
+        },
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Ajuste y/o cambio de bandas",
+          "n": 2,
+          "texto": "Desmontar cubre bandas",
+          "herramientas": "Llave de boca 11",
+          "frecuencia": "SEMANAL",
+          "notas": null
+        },
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Ajuste y/o cambio de bandas",
+          "n": 3,
+          "texto": "Quitar tensión en bandas",
+          "herramientas": "Llave de boca 22",
+          "frecuencia": "SEMANAL",
+          "notas": "2 bandas B34 por equipo 2 bandas B34 por equipo. El chequeo de bandas es visual; el cambio queda a criterio de quien realiza el mantenimiento."
+        },
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Lubricación y/o cambio de chumaceras",
+          "n": 1,
+          "texto": "Chumacera de pared 1.1/2''",
+          "herramientas": "Llave de boca n°19, grasero. Material: grasa grado alimenticio",
+          "frecuencia": "DIARIA (lubricación)",
+          "notas": null
+        },
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Lubricación y/o cambio de chumaceras",
+          "n": 2,
+          "texto": "Chumacera de piso 1.1/2''",
+          "herramientas": "Llave de boca n°19, grasero. Material: grasa grado alimenticio",
+          "frecuencia": "DIARIA (lubricación)",
+          "notas": null
+        },
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Cambio de aspas",
+          "n": 1,
+          "texto": "Quitar manualmente el cubre tamiz",
+          "herramientas": null,
+          "frecuencia": "DIARIA",
+          "notas": null
+        },
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Cambio de aspas",
+          "n": 2,
+          "texto": "Girar manualmente los pernos",
+          "herramientas": "Playo de presión para sujetar el tamiz",
+          "frecuencia": "DIARIA",
+          "notas": null
+        },
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Cambio de aspas",
+          "n": 3,
+          "texto": "Desmontar pernos",
+          "herramientas": "Llave de boca n°8 y corona",
+          "frecuencia": null,
+          "notas": "Realizar este paso solo si se van a cambiar las aspas"
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Limpieza general",
+          "n": 1,
+          "texto": "Ingresar agua por la entrada de la tolva",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": "NO MOJAR MOTOR"
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Limpieza general",
+          "n": 2,
+          "texto": "Presionar el botón de encendido (verde)",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": null
+        }
+      ]
+    },
+    "TNQ-RET": {
+      "origen": "TQAG-TC500",
+      "puestaEnMarcha": [
+        {
+          "tipo": "Puesta en marcha",
+          "n": 1,
+          "texto": "Iniciar bombeo desde sistema de bombeo n°2",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 2,
+          "texto": "Encender agitación",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 3,
+          "texto": "Abrir paso de aire",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 4,
+          "texto": "Regular presión de bombeo",
+          "duracion": null,
+          "obs": null
+        }
+      ],
+      "mantenimiento": [
+        {
+          "tipo": "Mantenimiento",
+          "procedimiento": "Revisión de aceite",
+          "n": 1,
+          "texto": "Verificar aceite en la caja de motor reductor",
+          "herramientas": null,
+          "frecuencia": "TRIMESTRAL",
+          "notas": null
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Limpieza general",
+          "n": 1,
+          "texto": "Ingresar agua al tanque",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": "Con manguera o desde la estación de bombeo"
+        }
+      ]
+    },
+    "INT": {
+      "origen": "ITR-TC2-1",
+      "puestaEnMarcha": [
+        {
+          "tipo": "Pre-operación",
+          "n": 1,
+          "texto": "Verificar que todas las entradas y salidas de fluido (SMS) estén cerradas de manera adecuada",
+          "duracion": null,
+          "obs": "Frecuencia: cada cambio de proceso"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 1,
+          "texto": "Posicionar el conector sanitario hacia el intercambiador 1 en la estación de bombeo 4",
+          "duracion": null,
+          "obs": "Posicionar de manera adecuada"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 2,
+          "texto": "Posicionar el conector sanitario hacia el intercambiador 2 en la estación de bombeo 5",
+          "duracion": null,
+          "obs": "Posicionar de manera adecuada"
+        }
+      ],
+      "mantenimiento": [
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Limpieza general",
+          "n": 1,
+          "texto": "Ingresar agua al intercambiador",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": "Con manguera o desde la estación de bombeo Este equipo NO requiere mantenimiento, únicamente limpieza y cambio de empaques sanitarios según necesidad."
+        }
+      ]
+    },
+    "DOS-VOL": {
+      "origen": "DVF-TC2T",
+      "puestaEnMarcha": [
+        {
+          "tipo": "Pre-operación",
+          "n": 1,
+          "texto": "Ajuste de pernos en tapa bridada",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Pre-operación",
+          "n": 2,
+          "texto": "Verificar polyflow en sitio",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 1,
+          "texto": "Regular presión en el pistón",
+          "duracion": null,
+          "obs": "No exceder los 4 bares"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 2,
+          "texto": "Regular presión de tolva entre 0.2 y 0.5 bares",
+          "duracion": null,
+          "obs": "No exceder los 0.5 bares"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 3,
+          "texto": "Calibración del temporizador",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 4,
+          "texto": "Accionar tablero de temporizador",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 5,
+          "texto": "Inicio de bombeo desde tanque 1 (estación de bombeo 4) a tolva 1",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 6,
+          "texto": "Inicio de bombeo desde tanque 2 (estación de bombeo 5) a tolva 2",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 7,
+          "texto": "Apertura de válvula de entrada de producto",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 8,
+          "texto": "Inspeccionar para controlar el nivel de llenado",
+          "duracion": null,
+          "obs": "Golpear la tolva: el sonido cambia cuando el fluido está en el nivel deseado"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 9,
+          "texto": "No exceder el nivel recomendado",
+          "duracion": null,
+          "obs": "Excederlo provoca que el producto ingrese a la línea de aire"
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 10,
+          "texto": "Cerrar válvula de entrada de producto",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 11,
+          "texto": "Presionar pedal para activar dosificación",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 12,
+          "texto": "Completar peso con botón de ajuste de peso (primeras dosificaciones)",
+          "duracion": null,
+          "obs": null
+        },
+        {
+          "tipo": "Puesta en marcha",
+          "n": 13,
+          "texto": "Repetir los pasos de regulación y calibración hasta obtener los resultados deseados",
+          "duracion": null,
+          "obs": null
+        }
+      ],
+      "mantenimiento": [
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Despresurizado y limpieza de tolva",
+          "n": 1,
+          "texto": "Despresurizar tolva girando la llave",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": null
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Despresurizado y limpieza de tolva",
+          "n": 2,
+          "texto": "Quitar polyflow",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": null
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Lavado de tubería",
+          "n": 1,
+          "texto": "Quitar SMS 1''",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": null
+        },
+        {
+          "tipo": "Limpieza",
+          "procedimiento": "Lavado de tubería",
+          "n": 2,
+          "texto": "Conectar manguera de recirculación",
+          "herramientas": null,
+          "frecuencia": null,
+          "notas": null
+        }
+      ]
+    }
+  },
+  "equipos": [
+    {
+      "codigo": "BAL-01",
+      "nombre": "Balanza 1",
+      "categoria": "Medición",
+      "modelo": "SUPER",
+      "serie": "WH2211002064",
+      "departamento": "PRODUCCION",
+      "centro": "ENVASADO MANUAL",
+      "ubicacion": "CUARTO DE ENVASADO 01",
+      "proveedor": "POWER PLUS",
+      "capacidad": "80 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "80 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "BAL-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BAL-02",
+      "nombre": "Balanza 2",
+      "categoria": "Medición",
+      "modelo": "SUPER",
+      "serie": "WH2211002065",
+      "departamento": "PRODUCCION",
+      "centro": "ENVASADO MANUAL",
+      "ubicacion": "CUARTO DE ENVASADO 02",
+      "proveedor": "POWER PLUS",
+      "capacidad": "80 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "80 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "BAL-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BAL-03",
+      "nombre": "Balanza 3",
+      "categoria": "Medición",
+      "modelo": "ACUWEIGH",
+      "serie": "AC-03A-0002",
+      "departamento": "PRODUCCION",
+      "centro": "PELADO MANUAL",
+      "ubicacion": null,
+      "proveedor": "POWER PLUS",
+      "capacidad": "200 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "200 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "BAL-03.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BAL-04",
+      "nombre": "Balanza 4",
+      "categoria": "Medición",
+      "modelo": "LEXUS",
+      "serie": "XH23070051318",
+      "departamento": "PRODUCCION",
+      "centro": "ENVASADO MANUAL",
+      "ubicacion": null,
+      "proveedor": "SECalMet",
+      "capacidad": null,
+      "estado": "Sin uso observado",
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "BAL-04.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BAL-05",
+      "nombre": "Balanza 5",
+      "categoria": "Medición",
+      "modelo": "ACUWEIGH",
+      "serie": "AC-03A-0001",
+      "departamento": "PRODUCCION",
+      "centro": "PELADO MANUAL",
+      "ubicacion": null,
+      "proveedor": "POWER PLUS",
+      "capacidad": "300 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "300 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "BAL-05.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BAL-06",
+      "nombre": "Balanza 6",
+      "categoria": "Medición",
+      "modelo": "SUPER",
+      "serie": "WH2211002066",
+      "departamento": "PRODUCCION",
+      "centro": "ENCARTONADO",
+      "ubicacion": "ENCARTONADO",
+      "proveedor": "POWER PLUS",
+      "capacidad": "80 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "80 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BOM-AQU-01",
+      "nombre": "BOMBA DE AGUA LINEA DE FRUTA PICADA",
+      "categoria": null,
+      "modelo": "PBP-50",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PELADO MANUAL",
+      "ubicacion": null,
+      "proveedor": "Paolo",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Q max",
+              "33 l/min"
+            ],
+            [
+              "H max",
+              "32 m"
+            ],
+            [
+              "Potencia",
+              "0.5 HP"
+            ],
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Corriente",
+              "4.6 A"
+            ],
+            [
+              "Velocidad",
+              "3450 rpm"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "BOM-AQU-01.jpg",
+        "BOM-AQU-01_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BOM-WIL-01",
+      "nombre": "BOMBAS NEUMATICAS WILDEN 1",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": "P2/PKPPP/WFS/WF/PWF/0400",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "BOM-WIL-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BOM-WIL-02",
+      "nombre": "BOMBAS NEUMATICAS WILDEN 2",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": "P2/PKPPP/WFS/WF/PWF/0400",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "BOM-WIL-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BOM-WIL-03",
+      "nombre": "BOMBAS NEUMATICAS WILDEN 3",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": "P2/PKPPP/WFS/WF/PWF/0400",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": null,
+      "proveedor": "FLORASINTESIS",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "BOM-WIL-03.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BOM-WIL-04",
+      "nombre": "BOMBAS NEUMATICAS WILDEN 4",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": "P2/PKPPP/WFS/WF/PWF/0400",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": null,
+      "proveedor": "FLORASINTESIS",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "BOM-WIL-04.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "BOM-WIL-05",
+      "nombre": "BOMBAS NEUMATICAS WILDEN 5",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": "P2/PKPPP/WFS/WF/PWF/0400",
+      "serie": "31034293",
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": null,
+      "proveedor": "LEVANNAPROP",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "BOM-WIL-05.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "COD-01",
+      "nombre": "CODIFICADORA 1",
+      "categoria": "Empaque Secundario",
+      "modelo": "BC300S/1.5M",
+      "serie": "bpm23S677",
+      "departamento": "PRODUCCION",
+      "centro": "ETIQUETADO",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Potencia",
+              "30 W"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "COD-01.jpg",
+        "COD-01_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "COD-02",
+      "nombre": "CODIFICADORA 2",
+      "categoria": "Empaque Secundario",
+      "modelo": "BC1.5M/300S",
+      "serie": "bpm21S495",
+      "departamento": "PRODUCCION",
+      "centro": "ETIQUETADO",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Potencia",
+              "30 W"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "COD-02.jpg",
+        "COD-02_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "DPU-01",
+      "nombre": "Despulpador 1",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": null,
+      "capacidad": "3000 Kg/h",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "3000 Kg/h"
+            ]
+          ]
+        },
+        {
+          "titulo": "Motor",
+          "campos": [
+            [
+              "Marca",
+              "WEG W22"
+            ],
+            [
+              "Potencia (HP - kW)",
+              "15 - 11"
+            ],
+            [
+              "Corriente",
+              "37 - 21.4 - 18.5 A"
+            ],
+            [
+              "Tensión",
+              "220 - 380 - 440 V"
+            ],
+            [
+              "Velocidad",
+              "1760 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.85"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "DPU-01.jpg",
+        "DPU-01_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": "DPU"
+    },
+    {
+      "codigo": "DPU-02",
+      "nombre": "Despulpador 2",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": null,
+      "capacidad": "600 Kg/h",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "600 Kg/h"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "DPU-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": "DPU"
+    },
+    {
+      "codigo": "DOS-VOL-01",
+      "nombre": "DOSIFICADOR VOLUMETRICO 1",
+      "categoria": "Dosificado y LLenado",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "DOSIFICADO AUTOMÁTICO",
+      "ubicacion": "CUARTO DE ENVASADO 01",
+      "proveedor": "CORPORACION MAQUINAS Y PLASTICOS MAQPLAST CIA. LTDA.",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Goya",
+              "397 g"
+            ],
+            [
+              "America",
+              "250 g"
+            ]
+          ]
+        }
+      ],
+      "notas": [
+        "500 g"
+      ],
+      "fotos": [
+        "DOS-VOL-01.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Parámetro",
+          "texto": "Presión del pistón: no exceder 4 bares."
+        },
+        {
+          "tipo": "Parámetro",
+          "texto": "Presión de tolva: entre 0.2 y 0.5 bares (no exceder 0.5 bares)."
+        }
+      ],
+      "plantilla": "DOS-VOL"
+    },
+    {
+      "codigo": "DOS-VOL-02",
+      "nombre": "DOSIFICADOR VOLUMÉTRICO 2",
+      "categoria": "Dosificado y LLenado",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "DOSIFICADO AUTOMÁTICO",
+      "ubicacion": "CUARTO DE ENVASADO 02",
+      "proveedor": "ECUAPACK CIA. LTDA.",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Goya",
+              "397 g"
+            ],
+            [
+              "America",
+              "250 g"
+            ]
+          ]
+        }
+      ],
+      "notas": [
+        "500 g"
+      ],
+      "fotos": [
+        "DOS-VOL-02.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Parámetro",
+          "texto": "Presión del pistón: no exceder 4 bares."
+        },
+        {
+          "tipo": "Parámetro",
+          "texto": "Presión de tolva: entre 0.2 y 0.5 bares (no exceder 0.5 bares)."
+        }
+      ],
+      "plantilla": "DOS-VOL"
+    },
+    {
+      "codigo": "ELE-CAN-01",
+      "nombre": "Elevador de cangilones 1",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": "Sin uso observado",
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "ELE-CAN-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "ELE-CAN-02",
+      "nombre": "Elevador de cangilones 2 Riel",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 1",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "ELE-CAN-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "ENC-01",
+      "nombre": "ENCARTONADORA",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "ENCARTONADO",
+      "ubicacion": "ENCARTONADO",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "ENC-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "ENV-AUT-01",
+      "nombre": "ENVASADORA AUTOMÁTICA",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "ENVASADO AUTOMÁTICO",
+      "ubicacion": null,
+      "proveedor": "CORPORACION MAQUINAS Y PLASTICOS MAQPLAST CIA. LTDA.",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "ENV-AUT-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "INT-01",
+      "nombre": "INTERCAMBIADOR DE TUBOS CONCENTRICOS",
+      "categoria": "Procesamiento Térmico",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PASTEURIZACIÓN",
+      "ubicacion": "ZONA DE PASTEURIZACIÓN",
+      "proveedor": "FLORASINTESIS",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [
+        {
+          "tipo": "Aviso",
+          "texto": "Este equipo NO requiere mantenimiento, únicamente limpieza y cambio de empaques sanitarios según necesidad."
+        }
+      ],
+      "plantilla": "INT"
+    },
+    {
+      "codigo": "INT-02",
+      "nombre": "INTERCAMBIADOR DE CALOR",
+      "categoria": "Procesamiento Térmico",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PASTEURIZACIÓN",
+      "ubicacion": "ZONA DE PASTEURIZACIÓN",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "INT-02.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Aviso",
+          "texto": "Este equipo NO requiere mantenimiento, únicamente limpieza y cambio de empaques sanitarios según necesidad."
+        }
+      ],
+      "plantilla": "INT"
+    },
+    {
+      "codigo": "JCK-01",
+      "nombre": "JACK PALLET 1",
+      "categoria": "Carga y transporte",
+      "modelo": "CBY-AC3",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": null,
+      "ubicacion": "RECEPCIÓN DE MATERIA PRIMA",
+      "proveedor": "POWERLIFT",
+      "capacidad": "3000 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "3000 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [
+        "Recepción de Materia Prima"
+      ],
+      "fotos": [
+        "JCK-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "JCK-02",
+      "nombre": "JACK PALLET 2",
+      "categoria": "Carga y transporte",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "JCK-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "JCK-03",
+      "nombre": "JACK PALLET 3",
+      "categoria": "Carga y transporte",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "JCK-03.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "JCK-04",
+      "nombre": "JACK PALLET 4",
+      "categoria": "Carga y transporte",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": "3000 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "3000 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "JCK-04.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "JCK-05",
+      "nombre": "JACK PALLET 5",
+      "categoria": "Carga y transporte",
+      "modelo": "CBY-AC3",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": "POWERLIFT",
+      "capacidad": "3000 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "3000 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "JCK-05.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "JCK-06",
+      "nombre": "JACK PALLET 6",
+      "categoria": "Carga y transporte",
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "LAV-01",
+      "nombre": "LAVADORA DE CEPILLOS",
+      "categoria": "Preparación de MP",
+      "modelo": "G55",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 1",
+      "ubicacion": "RECEPCIÓN DE MATERIA PRIMA",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor",
+          "campos": [
+            [
+              "Potencia (HP - kW)",
+              "2 - 1.5"
+            ],
+            [
+              "Corriente",
+              "5.68 - 3.29 - 2.84 A"
+            ],
+            [
+              "Tensión",
+              "220 - 380 - 440 V"
+            ],
+            [
+              "Velocidad",
+              "3500 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "LAV-01.jpg",
+        "LAV-01_1.jpg",
+        "LAV-01_2.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "LAV-02",
+      "nombre": "LAVADORA DE FRUTA",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 2",
+      "ubicacion": "ZONA DE LAVADO",
+      "proveedor": null,
+      "capacidad": "11.8 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor",
+          "campos": [
+            [
+              "Potencia (kW)",
+              "1.1"
+            ],
+            [
+              "Corriente",
+              "4.6 - 2.7 A"
+            ],
+            [
+              "Tensión",
+              "220 - 380 V"
+            ],
+            [
+              "Velocidad",
+              "1720 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.77"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Capacidad",
+              "11.8 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "LAV-02.jpg",
+        "LAV-02_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "MARM-01",
+      "nombre": "MARMITA 1 (450 kg)",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "ESCALDADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": "FLORASINTESIS",
+      "capacidad": "450 kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor Reductor",
+          "campos": [
+            [
+              "Marca",
+              "LAFERT"
+            ],
+            [
+              "Corriente",
+              "9.7 - 5.6 A"
+            ],
+            [
+              "Tensión",
+              "208 - 440 V"
+            ],
+            [
+              "Velocidad",
+              "1720 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.74"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "MARM-01.jpg",
+        "MARM-01_1.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Señal",
+          "texto": "Luz verde: en funcionamiento normal."
+        }
+      ],
+      "plantilla": "MARM"
+    },
+    {
+      "codigo": "MARM-02",
+      "nombre": "MARMITA 2 (200 kg)",
+      "categoria": "Formulación y Mezcla",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "MEZCLADO",
+      "ubicacion": "ZONA DE PASTEURIZACIÓN",
+      "proveedor": "FLORASINTESIS",
+      "capacidad": "200 kg",
+      "estado": "Sin uso observado",
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [
+        {
+          "tipo": "Señal",
+          "texto": "Luz verde: en funcionamiento normal."
+        }
+      ],
+      "plantilla": "MARM"
+    },
+    {
+      "codigo": "MARM-04",
+      "nombre": "MARMITA 4 (200 kg)",
+      "categoria": "Procesamiento Térmico",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PASTEURIZACIÓN",
+      "ubicacion": "ZONA DE PASTEURIZACIÓN",
+      "proveedor": null,
+      "capacidad": "200 kg",
+      "estado": "Sin uso observado",
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [
+        {
+          "tipo": "Señal",
+          "texto": "Luz verde: en funcionamiento normal."
+        }
+      ],
+      "plantilla": "MARM"
+    },
+    {
+      "codigo": "MARM-05",
+      "nombre": "MARMITA 5 ( 500 kg)",
+      "categoria": "Procesamiento Térmico",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PASTEURIZACIÓN",
+      "ubicacion": "ZONA DE PASTEURIZACIÓN",
+      "proveedor": "FLORASINTESIS",
+      "capacidad": "500 kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor Reductor",
+          "campos": [
+            [
+              "Marca",
+              "Bonfiglionli Group"
+            ],
+            [
+              "Potencia (HP - kW)",
+              "1 - 0.75"
+            ],
+            [
+              "Corriente",
+              "3.24 - 1.62 A"
+            ],
+            [
+              "Tensión",
+              "230 - 460 V"
+            ],
+            [
+              "Velocidad",
+              "1720 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.76"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "MARM-05.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Señal",
+          "texto": "Luz verde: en funcionamiento normal."
+        }
+      ],
+      "plantilla": "MARM"
+    },
+    {
+      "codigo": "MARM-06",
+      "nombre": "MARMITA 6 (500 kg)",
+      "categoria": "Procesamiento Térmico",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PASTEURIZACIÓN",
+      "ubicacion": "ZONA DE PASTEURIZACIÓN",
+      "proveedor": null,
+      "capacidad": "500 kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor Reductor",
+          "campos": [
+            [
+              "Marca",
+              "WEG"
+            ],
+            [
+              "Potencia (HP)",
+              "3"
+            ],
+            [
+              "Corriente",
+              "8.25 - 4.78 - 4.13 A"
+            ],
+            [
+              "Tensión",
+              "220 - 380 - 440 V"
+            ],
+            [
+              "Velocidad",
+              "1745 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.80"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "MARM-06.jpg",
+        "MARM-06_1.jpg",
+        "MARM-06_2.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Señal",
+          "texto": "Luz verde: en funcionamiento normal."
+        }
+      ],
+      "plantilla": "MARM"
+    },
+    {
+      "codigo": "MARM-07",
+      "nombre": "MARMITA 7 (750 kG)",
+      "categoria": "Procesamiento Térmico",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "CALENTAMIENTO",
+      "ubicacion": "ZONA DE PASTEURIZACIÓN",
+      "proveedor": null,
+      "capacidad": "750 kG",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor Reductor",
+          "campos": [
+            [
+              "Marca",
+              "SIEMENS"
+            ],
+            [
+              "Potencia (HP)",
+              "3"
+            ],
+            [
+              "Corriente",
+              "9.6 - 4.8 A"
+            ],
+            [
+              "Tensión",
+              "220 - 440 V"
+            ],
+            [
+              "Velocidad",
+              "1675 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.76"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "MARM-07.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Señal",
+          "texto": "Luz verde: en funcionamiento normal."
+        }
+      ],
+      "plantilla": "MARM"
+    },
+    {
+      "codigo": "MES-01",
+      "nombre": "MESAS DE LAVADO (TRABAJO)",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 1",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "MES-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "MES-02",
+      "nombre": "MESAS DE LAVADO (SELECCIÓN)",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 1",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "MES-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "RAL-01",
+      "nombre": "RALLADOR 1 (ROBOT)",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": "CL 52",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "RALLADO",
+      "ubicacion": "ZONA DE RALLADO",
+      "proveedor": "TERMALIMEX",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "RAL-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "RAL-02",
+      "nombre": "RALLADOR 2 (ROBOT)",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": "CL 52",
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "RALLADO",
+      "ubicacion": "ZONA DE RALLADO",
+      "proveedor": "TERMALIMEX",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "RAL-02.jpg",
+        "RAL-02_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "RLC-01",
+      "nombre": "RALLADOR DE COCO",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "RALLADO COCO",
+      "ubicacion": "ZONA DE RALLADO",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "RLC-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "REF-01",
+      "nombre": "Refinador 1(400 kg/h)",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": "LEVANNAPROP",
+      "capacidad": "400 kg/h",
+      "estado": "Sin uso observado",
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "REF-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "REF-02",
+      "nombre": "Refinador 2(400 kg/h)",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": "FLORASINTESIS",
+      "capacidad": "400 kg/h",
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "REF-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "SEL-01",
+      "nombre": "SELLADORA 1",
+      "categoria": "Dosificado y LLenado",
+      "modelo": "FR-770",
+      "serie": "W1111525080007",
+      "departamento": "PRODUCCION",
+      "centro": "DOSIFICADO MANUAL",
+      "ubicacion": "CUARTO DE ENVASADO 01",
+      "proveedor": "ECUAPACK CIA. LTDA.",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Potencia",
+              "670 W"
+            ],
+            [
+              "Corriente",
+              "6.09 A"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "SEL-01.jpg",
+        "SEL-01_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "SEL-02",
+      "nombre": "SELLADORA 2",
+      "categoria": "Dosificado y LLenado",
+      "modelo": "FR-770",
+      "serie": "W1111526010014",
+      "departamento": "PRODUCCION",
+      "centro": "DOSIFICADO MANUAL",
+      "ubicacion": "CUARTO DE ENVASADO 02",
+      "proveedor": "ECUAPACK CIA. LTDA.",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Potencia",
+              "670 W"
+            ],
+            [
+              "Corriente",
+              "6.09 A"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "SEL-02.jpg",
+        "SEL-02_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "SEL-03",
+      "nombre": "SELLADORA 3",
+      "categoria": "Dosificado y LLenado",
+      "modelo": "FR-770",
+      "serie": "W1111526010010",
+      "departamento": "PRODUCCION",
+      "centro": "DOSIFICADO MANUAL",
+      "ubicacion": null,
+      "proveedor": "ECUAPACK CIA. LTDA.",
+      "capacidad": null,
+      "estado": "Sin uso observado",
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Potencia",
+              "670 W"
+            ],
+            [
+              "Corriente",
+              "6.09 A"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "SEL-03.jpg",
+        "SEL-03_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "SEL-04",
+      "nombre": "SELLADORA 4",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "DOSIFICADO MANUAL",
+      "ubicacion": null,
+      "proveedor": "ECUAPACK CIA. LTDA.",
+      "capacidad": null,
+      "estado": "En reparación",
+      "bloques": [],
+      "notas": [],
+      "fotos": [
+        "SEL-04.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "SEL-CAJ-01",
+      "nombre": "SELLADORA DE CAJAS",
+      "categoria": "Empaque Secundario",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "ENFUNDADO 1",
+      "ubicacion": "ENCARTONADO",
+      "proveedor": "FINKTEC S.A.",
+      "capacidad": null,
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Potencia",
+              "120 W"
+            ],
+            [
+              "Corriente",
+              "1.6 A"
+            ],
+            [
+              "Velocidad",
+              "1550 rpm"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "SEL-CAJ-01.jpg",
+        "SEL-CAJ-01_1.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "TQH-01",
+      "nombre": "TANQUE DE MEZCLA (1000 kg) HOMOGENIZADOR",
+      "categoria": "Formulación y Mezcla",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "HOMOGENIZACIÓN",
+      "ubicacion": "ZONA DE MEZCLADO",
+      "proveedor": null,
+      "capacidad": "1000 kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor Reductor",
+          "campos": [
+            [
+              "Marca",
+              "SIEMENS"
+            ],
+            [
+              "Potencia (HP)",
+              "6"
+            ],
+            [
+              "Corriente",
+              "15.8 - 7.9 A"
+            ],
+            [
+              "Tensión",
+              "220 - 440 V"
+            ],
+            [
+              "Velocidad",
+              "1740 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.78"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "TQH-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "TNQ-RET-01",
+      "nombre": "TANQUE INOXIDABLE 1 ( 600 KG)",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": "FLORASINTESIS",
+      "capacidad": "600 KG",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor Reductor",
+          "campos": [
+            [
+              "Marca",
+              "VOGES"
+            ],
+            [
+              "Potencia (HP - kW)",
+              "3/4 - 0.55"
+            ],
+            [
+              "Corriente",
+              "2.9 - 1.66 - 1.45 A"
+            ],
+            [
+              "Tensión",
+              "220 - 380  - 440 V"
+            ],
+            [
+              "Velocidad",
+              "1680 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.70"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "TNQ-RET-01.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Parámetro",
+          "texto": "Agitación: motorreductor Voges 3/4 HP, 70 rpm."
+        }
+      ],
+      "plantilla": "TNQ-RET"
+    },
+    {
+      "codigo": "TNQ-RET-02",
+      "nombre": "TANQUE INOXIDABLE 2 ( 600 KG)",
+      "categoria": "Reducción de Tamaño y Extracción",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "PULPEADO",
+      "ubicacion": "ZONA DE DESPULPADO",
+      "proveedor": "LEVANNAPROP",
+      "capacidad": "600 KG",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor Reductor",
+          "campos": [
+            [
+              "Marca",
+              "VOGES"
+            ],
+            [
+              "Potencia (HP - kW)",
+              "3/4 - 0.55"
+            ],
+            [
+              "Corriente",
+              "2.9 - 1.66 - 1.45 A"
+            ],
+            [
+              "Tensión",
+              "220 - 380  - 440 V"
+            ],
+            [
+              "Velocidad",
+              "1680 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Cos φ",
+              "0.70"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "TNQ-RET-02.jpg"
+      ],
+      "parametros": [
+        {
+          "tipo": "Parámetro",
+          "texto": "Agitación: motorreductor Voges 3/4 HP, 70 rpm."
+        }
+      ],
+      "plantilla": "TNQ-RET"
+    },
+    {
+      "codigo": "TNQ-PUL-01",
+      "nombre": "TANQUE PULMON ENVASADORA AUTOMÁTICA",
+      "categoria": null,
+      "modelo": "JBG-500",
+      "serie": "2404030",
+      "departamento": "PRODUCCION",
+      "centro": "ENVASADO AUTOMÁTICO",
+      "ubicacion": "CUARTO DE ENVASADO 01",
+      "proveedor": "CORPORACION MAQUINAS Y PLASTICOS MAQPLAST CIA. LTDA.",
+      "capacidad": "500 L",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Motor",
+          "campos": [
+            [
+              "Marca",
+              "ZHEJIANG KERUIDA"
+            ],
+            [
+              "Potencia (HP - kW)",
+              "2 - 1.5"
+            ],
+            [
+              "Corriente",
+              "6.4 - 3.7 A"
+            ],
+            [
+              "Tensión",
+              "220 - 380 V"
+            ],
+            [
+              "Velocidad",
+              "1400 - 1700 rpm"
+            ],
+            [
+              "Fases",
+              "3 ~"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ]
+          ]
+        },
+        {
+          "titulo": "Tanque",
+          "campos": [
+            [
+              "Capacidad",
+              "500 L"
+            ],
+            [
+              "Pot Calentamiento",
+              "18 KW"
+            ],
+            [
+              "D out",
+              "38 mm"
+            ],
+            [
+              "Vel agitación",
+              "60 rpm"
+            ]
+          ]
+        },
+        {
+          "titulo": "Bomba · Motor",
+          "campos": [
+            [
+              "Potencia (HP - kW)",
+              "2 - 1.5"
+            ],
+            [
+              "Voltaje",
+              "220 - 380 V"
+            ],
+            [
+              "Corriente",
+              "6.6 - 3.82 A"
+            ],
+            [
+              "Velocidad",
+              "1430 rpm"
+            ]
+          ]
+        },
+        {
+          "titulo": "Bomba",
+          "campos": [
+            [
+              "Q",
+              "0.15 L/min"
+            ],
+            [
+              "P",
+              "1.5 MPa"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "TNQ-PUL-01.jpg",
+        "TNQ-PUL-01_1.jpg",
+        "TNQ-PUL-01_2.jpg",
+        "TNQ-PUL-01_3.jpg",
+        "TNQ-PUL-01_4.jpg",
+        "TNQ-PUL-01_5.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "TOL-DES-01",
+      "nombre": "TOLVA DE DESINFECCIÓN 1",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 1",
+      "ubicacion": "RECEPCIÓN DE MATERIA PRIMA",
+      "proveedor": null,
+      "capacidad": "300 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "300 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "TOL-DES-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "TOL-DES-02",
+      "nombre": "TOLVA DE DESINFECCION INOX 2",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 4",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": "600 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "600 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "TOL-DES-02.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "TOL-DES-03",
+      "nombre": "TOLVA DE DESINFECCION INOX 3",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 4",
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": "600 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "600 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "TOL-LAV-01",
+      "nombre": "TOLVA DE LAVADO 1",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 2",
+      "ubicacion": "RECEPCIÓN DE MATERIA PRIMA",
+      "proveedor": null,
+      "capacidad": "300 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "300 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [
+        "TOL-LAV-01.jpg"
+      ],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "TOL-LAV-02",
+      "nombre": "TOLVA DE LAVADO 2",
+      "categoria": "Preparación de MP",
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": "LAVADO 2",
+      "ubicacion": "RECEPCIÓN DE MATERIA PRIMA",
+      "proveedor": null,
+      "capacidad": "300 Kg",
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Capacidad",
+              "300 Kg"
+            ]
+          ]
+        }
+      ],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "MTC-01",
+      "nombre": "MONTACARGAS",
+      "categoria": "Carga y transporte",
+      "modelo": "7FGCU30",
+      "serie": "65550",
+      "departamento": "BODEGA",
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CCG-01",
+      "nombre": "CÁMARAS DE GONGELACIÓN 1",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": "PRODUCCION",
+      "centro": null,
+      "ubicacion": "ENCARTONADO",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CCG-02",
+      "nombre": "CÁMARAS DE GONGELACIÓN 2",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": "ENCARTONADO",
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-01",
+      "nombre": "CONTENEDOR C1",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-02",
+      "nombre": "CONTENEDOR C2",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-03",
+      "nombre": "CONTENEDOR C3",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-04",
+      "nombre": "CONTENEDOR C4",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-05",
+      "nombre": "CONTENEDOR C5",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-06",
+      "nombre": "CONTENEDOR C6",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-07",
+      "nombre": "CONTENEDOR C7",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-08",
+      "nombre": "CONTENEDOR C8",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-09",
+      "nombre": "CONTENEDOR C9",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    },
+    {
+      "codigo": "CDP-10",
+      "nombre": "CONTENEDOR C10",
+      "categoria": null,
+      "modelo": null,
+      "serie": null,
+      "departamento": null,
+      "centro": null,
+      "ubicacion": null,
+      "proveedor": null,
+      "capacidad": null,
+      "estado": null,
+      "bloques": [],
+      "notas": [],
+      "fotos": [],
+      "parametros": [],
+      "plantilla": null
+    }
+  ]
+}
