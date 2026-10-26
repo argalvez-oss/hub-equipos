@@ -1,4 +1,4 @@
-/* HUB MANTT — Fase 1 (solo lectura)
+/* Hub Equipos (antes HUB MANTT) — Fase 1 (solo lectura)
  * Datos: data/equipos.json, generado por tools/build_data.py a partir de
  *   - Plantilla_Levantamiento_Equipos_Planta.xlsx   -> equipos físicos
  *   - Plantilla_Digitalizacion_Equipos_v2.xlsx      -> procedimientos (Pasos_PuestaEnMarcha, Mantenimiento_Limpieza)
@@ -13,7 +13,9 @@
   'use strict';
 
   var JSQR_URL = 'https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js';
+  var NOMBRE_APP = 'Hub Equipos';
   var AREA = 'Sistemas e Innovación';
+  var CLAVE_RECIENTES = 'hub-equipos:recientes';
   var app = document.getElementById('app');
   var DATA = null;
   var listaEstado = { q: '', cat: '' };
@@ -122,9 +124,9 @@
   function encabezado(volver) {
     var izq = volver
       ? '<a class="back-btn" href="' + volver.href + '">' + ic('back') + '<span>' + esc(volver.txt) + '</span></a>'
-      : '<div class="mark">HM</div><div class="top-name">HUB MANTT<small>Equipos de planta</small></div>';
+      : '<div class="mark">HE</div><div class="top-name">' + NOMBRE_APP + '<small>Mantenimiento de planta</small></div>';
     return '<header class="top"><div class="top-in">' + izq +
-      '<div class="who" title="' + esc(AREA) + '"><span class="ava">SI</span><span>' + esc(AREA) + '</span></div>' +
+      '<span class="ava solo" title="' + esc(AREA) + '">SI</span>' +
       '</div></header>';
   }
 
@@ -159,7 +161,7 @@
     var r = parseHash(), p = r.partes;
     if (p[0] === 'equipo' && p[1]) { if (p[2]) vSeccion(p[1], p[2]); else vFicha(p[1]); }
     else if (p[0] === 'equipos') vLista(r.q);
-    else if (p[0] === 'mantenimiento') vMantenimiento();
+    else if (p[0] === 'mantenimiento') vMantenimiento(r.q);
     else if (p[0] === 'fallas') vFallas();
     else if (p[0] === 'admin') vAdmin();
     else vInicio();
@@ -168,41 +170,83 @@
 
   /* ---------- Inicio ---------- */
 
-  function vInicio() {
-    var eq = DATA.equipos;
-    var conProc = eq.filter(function (e) { return e.plantilla; }).length;
-    var incompletos = eq.filter(function (e) { return faltantes(e).length; }).length;
-    var sinUso = eq.filter(function (e) { return e.estado; }).length;
-    var nTareas = 0;
-    Object.keys(DATA.plantillas).forEach(function (k) { nTareas += procedimientos(DATA.plantillas[k]).length; });
-    var h = new Date().getHours();
-    var saludo = h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
+  // Equipos abiertos hace poco en este celular (solo comodidad; si el navegador no deja guardar, no pasa nada)
+  function leerRecientes() {
+    try { return JSON.parse(localStorage.getItem(CLAVE_RECIENTES)) || []; } catch (err) { return []; }
+  }
+  function guardarReciente(codigo) {
+    try {
+      var r = leerRecientes().filter(function (c) { return c !== codigo; });
+      r.unshift(codigo);
+      localStorage.setItem(CLAVE_RECIENTES, JSON.stringify(r.slice(0, 5)));
+    } catch (err) { /* sin almacenamiento */ }
+  }
 
-    function stat(n, txt, href, alerta) {
-      return '<a class="stat" href="' + href + '"><b' + (alerta ? ' class="alerta"' : '') + '>' + n + '</b><span>' + txt + '</span></a>';
-    }
-    function mod(href, icon, titulo, sub, id) {
-      return '<' + (id ? 'button type="button" id="' + id + '"' : 'a href="' + href + '"') + ' class="mod">' +
-        '<span class="mod-ic">' + ic(icon) + '</span><span class="mod-tx"><b>' + titulo + '</b><small>' + sub + '</small></span>' + ic('chev') +
-        '</' + (id ? 'button' : 'a') + '>';
-    }
+  function cardEquipo(e, extra) {
+    if (extra === undefined) extra = e.estado ? '<span class="pill">' + esc(e.estado) + '</span>' : '';
+    return '<a class="card" href="' + urlEquipo(e) + '">' +
+      '<span class="thumb">' + (e.fotos.length ? '<img src="' + foto(e.fotos[0]) + '" alt="" loading="lazy">' : esc(e.codigo.split('-')[0])) + '</span>' +
+      '<span class="main"><span class="name">' + esc(e.nombre) + '</span><span class="meta"><span class="mono">' + esc(e.codigo) + '</span>' +
+      (e.centro ? '<span>· ' + esc(e.centro) + '</span>' : '') + '</span>' +
+      (extra ? '<span class="meta">' + extra + '</span>' : '') + '</span>' + ic('chev') + '</a>';
+  }
+
+  function buscar(texto) {
+    var f = texto.trim().toLowerCase();
+    return DATA.equipos.filter(function (e) {
+      return !f || e.nombre.toLowerCase().indexOf(f) > -1 || e.codigo.toLowerCase().indexOf(f) > -1;
+    });
+  }
+
+  function vInicio() {
+    var recientes = leerRecientes().map(getEquipo).filter(Boolean);
+    var cats = [];
+    DATA.equipos.forEach(function (e) { if (e.categoria && cats.indexOf(e.categoria) === -1) cats.push(e.categoria); });
+    cats.sort();
+
+    // tareas diarias y semanales: lo que más se consulta en planta
+    var frecuentes = [];
+    Object.keys(DATA.plantillas).forEach(function (k) {
+      procedimientos(DATA.plantillas[k]).forEach(function (t) { if (rangoFrecuencia(t.frecuencia) <= 1) frecuentes.push({ k: k, t: t }); });
+    });
+    frecuentes.sort(function (a, b) { return rangoFrecuencia(a.t.frecuencia) - rangoFrecuencia(b.t.frecuencia); });
 
     pintar('inicio',
-      '<section class="greet"><h1>' + saludo + ' &#128075;</h1><p>Consulta cómo operar y mantener cada equipo de planta.</p></section>' +
+      '<section class="greet"><h1>¿Qué equipo necesitas?</h1><p>Escanea el QR de la placa o búscalo por nombre o código.</p></section>' +
       '<button class="cta" type="button" id="btnQR"><span class="plus">' + ic('qr') + '</span>' +
-        '<span><b>Escanear QR</b><small>Apunta a la placa del equipo para abrir su ficha</small></span></button>' +
-      '<section class="stack"><div class="sec-h"><h2>Resumen</h2></div><div class="stats">' +
-        stat(eq.length, 'Equipos registrados', '#/equipos', false) +
-        stat(conProc, 'Con procedimiento', '#/equipos?filtro=procedimiento', false) +
-        stat(incompletos, 'Fichas incompletas', '#/equipos?filtro=incompletos', incompletos > 0) +
-        stat(sinUso, 'Sin uso / en reparación', '#/equipos?filtro=estado', sinUso > 0) +
-      '</div></section>' +
-      '<section class="stack"><div class="sec-h"><h2>Accesos rápidos</h2></div>' +
-        mod('#/equipos?buscar=1', 'search', 'Buscar equipo', 'Por nombre o código') +
-        mod('#/mantenimiento', 'wrench', 'Mantenimientos', plural(nTareas, 'tarea registrada', 'tareas registradas')) +
-        mod('#/fallas', 'alert', 'Fallas conocidas', 'Síntoma, causa y solución') +
-      '</section>');
+        '<span><b>Escanear QR</b><small>Abre la ficha del equipo al instante</small></span></button>' +
+      '<section class="stack">' +
+        '<div class="search">' + ic('search') + '<input id="buscador" class="input" type="search" placeholder="Ej. marmita, selladora, MARM-05" aria-label="Buscar equipo" autocomplete="off"></div>' +
+        '<div class="list" id="resultados"></div>' +
+      '</section>' +
+      (recientes.length ? '<section class="stack" id="bloqueRecientes"><div class="sec-h"><h2>Vistos recientemente</h2></div><div class="list">' +
+        recientes.map(function (e) { return cardEquipo(e); }).join('') + '</div></section>' : '') +
+      (frecuentes.length ? '<section class="stack"><div class="sec-h"><h2>Tareas diarias y semanales</h2><a class="link-mini" href="#/mantenimiento">Ver todas</a></div>' +
+        frecuentes.map(function (x) {
+          return '<a class="mod" href="#/mantenimiento?f=' + encodeURIComponent(x.k) + '"><span class="mod-ic">' + ic(x.t.tipo === 'Limpieza' ? 'drop' : 'wrench') + '</span>' +
+            '<span class="mod-tx"><b>' + esc(x.t.nombre) + '</b><small>' + esc(nombreFamilia(x.k)) + ' · ' +
+            equiposDePlantilla(x.k).map(function (e) { return esc(e.codigo); }).join(', ') + '</small>' +
+            '<span class="pill" style="margin-top:6px">' + esc(x.t.frecuencia) + '</span></span>' + ic('chev') + '</a>';
+        }).join('') + '</section>' : '') +
+      '<section class="stack"><div class="sec-h"><h2>Explorar por categoría</h2></div><div class="chips wrap-chips">' +
+        cats.map(function (c) { return '<a class="chip" href="#/equipos?cat=' + encodeURIComponent(c) + '">' + esc(c) + '</a>'; }).join('') +
+      '</div></section>');
 
+    var input = document.getElementById('buscador');
+    var res = document.getElementById('resultados');
+    var bloqueRec = document.getElementById('bloqueRecientes');
+    input.addEventListener('input', function () {
+      var q = input.value.trim();
+      if (bloqueRec) bloqueRec.hidden = !!q;
+      if (!q) { res.innerHTML = ''; return; }
+      var items = buscar(q);
+      listaEstado.q = q;
+      listaEstado.cat = '';
+      res.innerHTML = items.length
+        ? items.slice(0, 6).map(function (e) { return cardEquipo(e); }).join('') +
+          (items.length > 6 ? '<a class="btn block" href="#/equipos">Ver los ' + items.length + ' resultados</a>' : '')
+        : '<div class="empty">' + ic('search') + 'Ningún equipo coincide con “' + esc(q) + '”.</div>';
+    });
     document.getElementById('btnQR').addEventListener('click', escanearQR);
   }
 
@@ -211,7 +255,8 @@
   var FILTROS = {
     incompletos: { titulo: 'Fichas incompletas', fn: function (e) { return faltantes(e).length; } },
     procedimiento: { titulo: 'Con procedimiento', fn: function (e) { return e.plantilla; } },
-    estado: { titulo: 'Sin uso / en reparación', fn: function (e) { return e.estado; } }
+    estado: { titulo: 'Sin uso / en reparación', fn: function (e) { return e.estado; } },
+    sinfoto: { titulo: 'Sin foto', fn: function (e) { return !e.fotos.length; } }
   };
 
   function vLista(q) {
@@ -219,6 +264,7 @@
     var cats = [];
     DATA.equipos.forEach(function (e) { if (e.categoria && cats.indexOf(e.categoria) === -1) cats.push(e.categoria); });
     cats.sort();
+    if (q.cat != null) { listaEstado.cat = q.cat; listaEstado.q = ''; }
     if (listaEstado.cat && cats.indexOf(listaEstado.cat) === -1) listaEstado.cat = '';
 
     pintar('equipos',
@@ -251,14 +297,10 @@
       document.getElementById('contador').textContent = plural(items.length, 'equipo', 'equipos');
       if (!items.length) { lista.innerHTML = '<div class="empty">' + ic('search') + 'Ningún equipo coincide con tu búsqueda.</div>'; return; }
       lista.innerHTML = items.map(function (e) {
-        var meta = '<span class="mono">' + esc(e.codigo) + '</span>' + (e.centro ? '<span>· ' + esc(e.centro) + '</span>' : '');
         var extra = q.filtro === 'incompletos'
           ? '<span class="pill gris plano">Falta: ' + esc(faltantes(e).join(', ')) + '</span>'
           : e.estado ? '<span class="pill">' + esc(e.estado) + '</span>' : e.plantilla ? '<span class="pill ok">Con procedimiento</span>' : '';
-        return '<a class="card" href="' + urlEquipo(e) + '">' +
-          '<span class="thumb">' + (e.fotos.length ? '<img src="' + foto(e.fotos[0]) + '" alt="" loading="lazy">' : esc(e.codigo.split('-')[0])) + '</span>' +
-          '<span class="main"><span class="name">' + esc(e.nombre) + '</span><span class="meta">' + meta + '</span>' +
-          (extra ? '<span class="meta">' + extra + '</span>' : '') + '</span>' + ic('chev') + '</a>';
+        return cardEquipo(e, extra);
       }).join('');
     }
 
@@ -283,6 +325,7 @@
     var e = getEquipo(codigo);
     if (!e) { noEncontrado(codigo); return; }
     if (e.codigo !== codigo) { location.replace(urlEquipo(e)); return; }
+    guardarReciente(e.codigo);
     var p = plantillaDe(e);
     var nProc = procedimientos(p).length;
     var nPasos = p ? p.puestaEnMarcha.length : 0;
@@ -441,28 +484,47 @@
 
   /* ---------- Pestañas generales ---------- */
 
-  function vMantenimiento() {
-    var items = [];
-    Object.keys(DATA.plantillas).forEach(function (k) {
-      procedimientos(DATA.plantillas[k]).forEach(function (t) { items.push({ k: k, t: t }); });
-    });
-    items.sort(function (a, b) { return rangoFrecuencia(a.t.frecuencia) - rangoFrecuencia(b.t.frecuencia); });
+  // Por tipo de equipo: el procedimiento es el mismo para toda la familia (todas las marmitas, etc.)
+  function vMantenimiento(q) {
+    var familias = Object.keys(DATA.plantillas).filter(function (k) { return procedimientos(DATA.plantillas[k]).length; })
+      .sort(function (a, b) { return nombreFamilia(a).localeCompare(nombreFamilia(b)); });
 
-    var cuerpo = '<div class="s-head"><h1>Mantenimiento</h1><p class="muted">Tareas de mantenimiento y limpieza, agrupadas por frecuencia.</p></div>';
-    if (!items.length) { pintar('mantenimiento', cuerpo + vacio('wrench', 'Aún no hay tareas registradas.')); return; }
-    cuerpo += agrupar(items, function (x) { return x.t.frecuencia ? x.t.frecuencia.toUpperCase() : 'Sin frecuencia definida'; })
-      .map(function (g) {
-        return '<section class="stack"><div class="grupo">' + esc(g.clave.charAt(0) + g.clave.slice(1).toLowerCase()) + '<span class="n">' + g.items.length + '</span></div>' +
-          g.items.map(function (x) {
-            return '<div class="box"><h3><span>' + esc(x.t.nombre) + '</span><span class="pill' + (x.t.tipo === 'Limpieza' ? ' ok' : '') + '">' + esc(x.t.tipo) + '</span></h3>' +
-              '<p class="muted">' + esc(nombreFamilia(x.k)) + ' · ' + plural(x.t.pasos.length, 'paso', 'pasos') + '</p>' +
-              '<div class="tags">' + equiposDePlantilla(x.k).map(function (e) {
-                return '<a class="tag" href="' + urlEquipo(e, 'mantenimiento') + '">' + esc(e.codigo) + '</a>';
-              }).join('') + '</div></div>';
-          }).join('') + '</section>';
-      }).join('') +
-      '<p class="muted" style="font-size:13px">El registro de tareas realizadas (bitácora) llega en la Fase 2.</p>';
+    var cuerpo = '<div class="s-head"><h1>Mantenimiento</h1><p class="muted">Tareas de mantenimiento y limpieza por tipo de equipo.</p></div>';
+    if (!familias.length) { pintar('mantenimiento', cuerpo + vacio('wrench', 'Aún no hay tareas registradas.')); return; }
+
+    cuerpo += familias.map(function (k) {
+      var eqs = equiposDePlantilla(k);
+      var procs = procedimientos(DATA.plantillas[k]);
+      var conFoto = eqs.filter(function (e) { return e.fotos.length; })[0];
+      var frecs = [];
+      procs.forEach(function (t) { if (t.frecuencia && frecs.indexOf(t.frecuencia) === -1) frecs.push(t.frecuencia); });
+      frecs.sort(function (a, b) { return rangoFrecuencia(a) - rangoFrecuencia(b); });
+      var tipos = agrupar(procs, function (t) { return t.tipo; });
+      tipos.sort(function (a, b) { return (a.clave === 'Limpieza') - (b.clave === 'Limpieza'); });
+      var aviso = delTipo(eqs[0], 'Aviso').map(function (x) {
+        return '<div class="warn" style="margin-top:0">' + ic('alert') + '<span><b>Importante:</b> ' + esc(x.texto) + '</span></div>';
+      }).join('');
+
+      return '<details class="fam" id="fam-' + esc(k) + '"' + (q.f === k ? ' open' : '') + '><summary>' +
+          '<span class="thumb">' + (conFoto ? '<img src="' + foto(conFoto.fotos[0]) + '" alt="" loading="lazy">' : esc(k)) + '</span>' +
+          '<span class="main"><span class="name">' + esc(nombreFamilia(k)) + '</span>' +
+          '<span class="meta">' + plural(procs.length, 'tarea', 'tareas') + ' · ' + plural(eqs.length, 'equipo', 'equipos') + '</span>' +
+          (frecs.length ? '<span class="meta">' + frecs.map(function (f) { return '<span class="pill">' + esc(f) + '</span>'; }).join('') + '</span>' : '') +
+          '</span>' + ic('chev') + '</summary>' +
+        '<div class="fam-in">' + aviso +
+          '<div class="tags">' + eqs.map(function (e) { return '<a class="tag" href="' + urlEquipo(e) + '">' + esc(e.codigo) + '</a>'; }).join('') + '</div>' +
+          tipos.map(function (g) {
+            return '<div class="grupo">' + esc(g.clave) + '<span class="n">' + g.items.length + '</span></div>' + g.items.map(tarea).join('');
+          }).join('') +
+        '</div></details>';
+    }).join('') +
+    '<p class="muted" style="font-size:13px">El registro de tareas realizadas (bitácora) llega en la Fase 2.</p>';
     pintar('mantenimiento', cuerpo);
+
+    if (q.f) {
+      var abierto = document.getElementById('fam-' + q.f);
+      if (abierto) setTimeout(function () { abierto.scrollIntoView({ block: 'start' }); window.scrollBy(0, -70); }, 0);
+    }
   }
 
   function vFallas() {
@@ -470,10 +532,26 @@
       vacio('alert', 'Aún no hay fallas documentadas.<br>En la Fase 2 cualquier persona podrá reportar una falla con foto, que llegará a Mantenimiento.'));
   }
 
+  // Estado de la información: sirve a quien completa los Excel, no a quien opera el equipo
   function vAdmin() {
-    pintar('admin', '<div class="s-head"><h1>Admin</h1></div>' +
-      vacio('lock', 'Panel de administración — disponible en la Fase 2.<br>Acceso con usuario y contraseña para editar equipos, fotos y procedimientos.') +
-      '<p class="muted mono" style="text-align:center">Datos: ' + esc((DATA.generado || '').replace('T', ' ')) + ' · ' + plural(DATA.equipos.length, 'equipo', 'equipos') + '</p>');
+    var eq = DATA.equipos;
+    var conProc = eq.filter(function (e) { return e.plantilla; }).length;
+    var incompletos = eq.filter(function (e) { return faltantes(e).length; }).length;
+    var sinUso = eq.filter(function (e) { return e.estado; }).length;
+    var sinFoto = eq.filter(function (e) { return !e.fotos.length; }).length;
+    function stat(n, txt, href, alerta) {
+      return '<a class="stat" href="' + href + '"><b' + (alerta ? ' class="alerta"' : '') + '>' + n + '</b><span>' + txt + '</span></a>';
+    }
+    pintar('admin', '<div class="s-head"><h1>Admin</h1><p class="muted">Estado de la información cargada.</p></div>' +
+      '<div class="stats">' +
+        stat(eq.length, 'Equipos registrados', '#/equipos', false) +
+        stat(conProc, 'Con procedimiento', '#/equipos?filtro=procedimiento', false) +
+        stat(incompletos, 'Fichas incompletas', '#/equipos?filtro=incompletos', incompletos > 0) +
+        stat(sinFoto, 'Sin foto', '#/equipos?filtro=sinfoto', sinFoto > 0) +
+        stat(sinUso, 'Sin uso / en reparación', '#/equipos?filtro=estado', sinUso > 0) +
+      '</div>' +
+      vacio('lock', 'Edición de equipos, fotos y procedimientos desde la app: Fase 2 (con usuario y contraseña).') +
+      '<p class="muted mono" style="text-align:center">Datos actualizados: ' + esc((DATA.generado || '').replace('T', ' ')) + '</p>');
   }
 
   /* ---------- Escáner QR ---------- */

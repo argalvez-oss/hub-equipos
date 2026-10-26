@@ -46,6 +46,7 @@ svg.i { width: 20px; height: 20px; flex: none; stroke: currentColor; fill: none;
 .who { margin-left: auto; display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 4px 10px 4px 4px; font-size: 13px; font-weight: 600; max-width: 48%; }
 .who span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ava { width: 26px; height: 26px; border-radius: 50%; background: var(--soft-brand); color: var(--brand); display: grid; place-items: center; font-size: 11px; font-weight: 700; flex: none; }
+.ava.solo { margin-left: auto; width: 34px; height: 34px; font-size: 12.5px; border: 1px solid var(--line); }
 
 main.wrap { padding-top: 20px; padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 20px; }
 
@@ -87,8 +88,24 @@ main.wrap { padding-top: 20px; padding-bottom: calc(100px + env(safe-area-inset-
 .mod-ic svg { width: 24px; height: 24px; }
 .mod-tx { flex: 1; min-width: 0; }
 .mod-tx b { display: block; font-family: var(--f-display); font-size: 18px; }
-.mod-tx small { color: var(--muted); font-size: 13.5px; }
+.mod-tx small { display: block; color: var(--muted); font-size: 13.5px; }
 .mod > svg { color: var(--muted); }
+.mod > .pill { flex: none; }
+.link-mini { color: var(--brand); font-weight: 600; font-size: 13.5px; }
+.chips.wrap-chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; }
+
+/* Mantenimiento por tipo de equipo (plegable) */
+.fam { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.fam summary { list-style: none; display: flex; align-items: center; gap: 12px; padding: 12px 14px 12px 12px; cursor: pointer; }
+.fam summary::-webkit-details-marker { display: none; }
+.fam summary .main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.fam summary .name { font-family: var(--f-display); font-weight: 700; font-size: 18px; }
+.fam summary .meta { color: var(--muted); font-size: 13px; display: flex; gap: 6px; flex-wrap: wrap; }
+.fam summary > svg { color: var(--muted); transition: transform .2s; }
+.fam[open] summary > svg { transform: rotate(90deg); }
+.fam[open] summary { border-bottom: 1px solid var(--line); }
+.fam-in { padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+.fam-in .box { background: var(--bg); }
 
 /* ---------- Lista de equipos ---------- */
 .filters { display: flex; flex-direction: column; gap: 10px; }

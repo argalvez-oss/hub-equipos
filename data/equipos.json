@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-26T11:20:11",
+  "generado": "2026-10-26T11:51:45",
   "plantillas": {
     "MARM": {
       "origen": "MAG-TC400",
@@ -1846,7 +1846,7 @@
       "ubicacion": "ZONA DE DESPULPADO",
       "proveedor": "LEVANNAPROP",
       "capacidad": "400 kg/h",
-      "estado": "Sin uso observado",
+      "estado": null,
       "bloques": [],
       "notas": [],
       "fotos": [
@@ -1972,7 +1972,7 @@
       "ubicacion": null,
       "proveedor": "ECUAPACK CIA. LTDA.",
       "capacidad": null,
-      "estado": "Sin uso observado",
+      "estado": null,
       "bloques": [
         {
           "titulo": "Datos técnicos",
@@ -2007,16 +2007,38 @@
     {
       "codigo": "SEL-04",
       "nombre": "SELLADORA 4",
-      "categoria": null,
-      "modelo": null,
+      "categoria": "Dosificado y LLenado",
+      "modelo": "FR-770",
       "serie": null,
       "departamento": "PRODUCCION",
       "centro": "DOSIFICADO MANUAL",
       "ubicacion": null,
       "proveedor": "ECUAPACK CIA. LTDA.",
       "capacidad": null,
-      "estado": "En reparación",
-      "bloques": [],
+      "estado": null,
+      "bloques": [
+        {
+          "titulo": "Datos técnicos",
+          "campos": [
+            [
+              "Voltaje",
+              "110 V"
+            ],
+            [
+              "Frecuencia",
+              "60 Hz"
+            ],
+            [
+              "Potencia",
+              "670 W"
+            ],
+            [
+              "Corriente",
+              "6.09 A"
+            ]
+          ]
+        }
+      ],
       "notas": [],
       "fotos": [
         "SEL-04.jpg"

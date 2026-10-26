@@ -1,4 +1,4 @@
-# HUB MANTT
+# Hub Equipos
 
 Instructivo digital de uso y mantenimiento de los equipos de planta. Cualquier persona abre la ficha de un equipo desde el celular, buscándolo o escaneando el QR de su placa. **Fase 1: solo lectura.**
 
@@ -27,21 +27,21 @@ python tools/preparar_subida.py
 Eso vuelve a leer los Excel y las fotos y deja esta carpeta lista para subir.
 
 ## 1. Publicar en GitHub Pages
-1. En tu cuenta de GitHub crear el repositorio `hub-mantt` (público).
+1. En tu cuenta de GitHub crear el repositorio `hub-equipos` (público; ya creado en la cuenta argalvez-oss).
 2. Subir **todo el contenido de esta carpeta** a la rama `main`: *Add file → Upload files*, arrastrar los archivos y carpetas, y *Commit changes*.
 3. En el repositorio: **Settings → Pages → Source: Deploy from a branch → main / (root)** → **Save**.
-4. En uno o dos minutos la app queda en `https://<tu-usuario>.github.io/hub-mantt/`.
+4. En uno o dos minutos la app queda en `https://argalvez-oss.github.io/hub-equipos/`.
 
-**Al publicar cambios:** subir el número de `VERSION` en `sw.js` (por ejemplo `hm-v1` → `hm-v2`) y volver a subir los archivos que cambiaron. Así los celulares que ya tienen la app descargan la versión nueva.
+**Al publicar cambios:** subir el número de `VERSION` en `sw.js` (por ejemplo `he-v2` → `he-v3`) y volver a subir los archivos que cambiaron. Así los celulares que ya tienen la app descargan la versión nueva.
 
 ## 2. Códigos QR de las placas
 Cada QR abre la ficha del equipo con su código del levantamiento, que no cambia:
-`https://<tu-usuario>.github.io/hub-mantt/#/equipo/MARM-01`
+`https://argalvez-oss.github.io/hub-equipos/#/equipo/MARM-01`
 
 Con la URL publicada, desde la carpeta `hub-mantt`:
 
 ```bash
-python tools/generate_qr.py --base-url https://<tu-usuario>.github.io/hub-mantt/
+python tools/generate_qr.py --base-url https://argalvez-oss.github.io/hub-equipos/
 ```
 
 Genera `qr/<CÓDIGO>.png` (código y nombre debajo), listos para imprimir.
