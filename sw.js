@@ -1,6 +1,6 @@
 // Service worker: guarda la app en el celular para que abra rápido y sin señal.
 // Al publicar cambios, subir VERSION para que los celulares descarguen la nueva versión.
-const VERSION = 'he-v4';
+const VERSION = 'he-v5';
 const JSQR = 'https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js';
 const SHELL = [
   './', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'data/equipos.json',

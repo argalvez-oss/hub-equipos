@@ -133,7 +133,8 @@ main.wrap { padding-top: 20px; padding-bottom: calc(100px + env(safe-area-inset-
 .gallery { position: relative; }
 .gal { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 8px; border-radius: 18px; scrollbar-width: none; }
 .gal::-webkit-scrollbar { display: none; }
-.gal img { flex: 0 0 100%; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; scroll-snap-align: center; border-radius: 18px; background: var(--line); cursor: zoom-in; }
+/* contain: la foto se ve completa (verticales u horizontales), sin recortar */
+.gal img { flex: 0 0 100%; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; scroll-snap-align: center; border-radius: 18px; background: var(--soft-brand); cursor: zoom-in; }
 .gal-n { position: absolute; right: 10px; bottom: 10px; background: rgba(0,0,0,.55); color: #fff; font-family: var(--f-mono); font-size: 11.5px; padding: 3px 8px; border-radius: 999px; }
 .nofoto { aspect-ratio: 16 / 9; border-radius: 18px; background: var(--soft-brand); color: var(--brand); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
 .nofoto b { font-family: var(--f-display); font-size: 30px; }
