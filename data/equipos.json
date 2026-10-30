@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-26T11:51:45",
+  "generado": "2026-10-30T14:57:50",
   "plantillas": {
     "MARM": {
       "origen": "MAG-TC400",
@@ -1142,7 +1142,9 @@
       "estado": null,
       "bloques": [],
       "notas": [],
-      "fotos": [],
+      "fotos": [
+        "INT-01.jpg"
+      ],
       "parametros": [
         {
           "tipo": "Aviso",
@@ -1596,7 +1598,8 @@
       ],
       "notas": [],
       "fotos": [
-        "MARM-05.jpg"
+        "MARM-05.jpg",
+        "MARM-05_1.jpg"
       ],
       "parametros": [
         {
@@ -1661,7 +1664,8 @@
       "fotos": [
         "MARM-06.jpg",
         "MARM-06_1.jpg",
-        "MARM-06_2.jpg"
+        "MARM-06_2.jpg",
+        "MARM-06_3.jpg"
       ],
       "parametros": [
         {
@@ -1724,7 +1728,8 @@
       ],
       "notas": [],
       "fotos": [
-        "MARM-07.jpg"
+        "MARM-07.jpg",
+        "MARM-07_1.jpg"
       ],
       "parametros": [
         {
@@ -2204,7 +2209,8 @@
       ],
       "notas": [],
       "fotos": [
-        "TNQ-RET-01.jpg"
+        "TNQ-RET-01.jpg",
+        "TNQ-RET-01_1.jpg"
       ],
       "parametros": [
         {
@@ -2267,7 +2273,8 @@
       ],
       "notas": [],
       "fotos": [
-        "TNQ-RET-02.jpg"
+        "TNQ-RET-02.jpg",
+        "TNQ-RET-02_1.jpg"
       ],
       "parametros": [
         {
